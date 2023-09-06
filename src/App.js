@@ -4,6 +4,8 @@ import {
   QueryClientProvider,
 } from "@tanstack/react-query";
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
+import Todo from './pages/Tender';
+
 
 const App = () => {
   // Create a client
@@ -11,7 +13,11 @@ const App = () => {
   return (
     // Provide the client to your App
     <QueryClientProvider client={queryClient}>
-      <div>Hello</div>
+      <div className="flex flex-row flex-wrap p-10">
+      <Todo />
+      </div>
+
+
       <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
   );
